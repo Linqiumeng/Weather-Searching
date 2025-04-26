@@ -1,0 +1,174 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f1d0, #f8e8c4);
+    color: #333;
+}
+
+/* 搜索区域样式 */
+.search-area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.seach-part {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.css-search {
+    padding: 14px 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.css-search:focus {
+    background-color: #f9f9f9;
+}
+
+.css-search-button {
+    background-color: #FD8250;
+    border: none;
+    padding: 0 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.css-search-button:hover {
+    background-color: #ff6b30;
+}
+
+/* 天气信息显示区域 */
+.css-weather-app {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    max-width: 800px;
+    width: 90%;
+    gap: 20px;
+}
+
+.css-display {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.css-weather-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.main, .css-minor {
+    padding: 0 15px;
+}
+
+.main p, .temp p, .other-info p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.main p:first-child, .temp p:first-child, .other-info p:first-child {
+    font-weight: bold;
+    color: #888;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main p:nth-child(2) {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.css-minor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* 温度和湿度值的特殊样式 */
+.temp p:nth-child(2), .temp p:nth-child(3), .temp p:nth-child(4),
+.other-info p:nth-child(2), .other-info p:nth-child(3) {
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* 当前温度特别突出 */
+.temp p:nth-child(2) {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #FD8250;
+}
+
+/* 天气图标区域 */
+.css-weather-emoji {
+    display: grid;
+    place-content: center;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.css-weather-emoji img {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.css-weather-emoji img:hover {
+    transform: scale(1.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .css-weather-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .css-minor {
+        margin-top: 15px;
+    }
+    
+    .seach-part {
+        width: 95%;
+    }
+    
+    .css-search {
+        padding: 12px 15px;
+    }
+}
+
+/* 添加动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.css-weather-info, .css-weather-emoji {
+    animation: fadeIn 0.5s ease-out;
+}

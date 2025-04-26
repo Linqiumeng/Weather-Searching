@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>天气预报 - 美国城市</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="css-weather-app">
+            <header class="search-area">
+                <div class="seach-part">
+                    <input class="css-search js-search" placeholder=" Search in City name">
+                    <button class="css-search-button js-search-button">搜索</button>
+                </div>
+            </header>
+                
+            <section class="css-display js-display">
+                <article class="css-weather-info">
+                    <div class="main js-main">
+                        <p>城市: </p>
+                        <p>今日天气: </p>
+                    </div>
+
+                    <div class="css-minor">
+                        <div class="temp">
+                            <p>今日温度: </p>
+                        </div>
+
+                        <div class="other-info">
+                            <p>今日湿度: </p>
+                        </div>
+                    </div>
+                </article>
+
+                <figure class="css-weather-emoji">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png" alt="天气图标">
+                </figure>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
